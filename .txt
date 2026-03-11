@@ -1,0 +1,71 @@
+MongoDB
+
+    1. use mydb
+    2. create collection
+        db.createCollection("certificates")
+        db.createCollection("users")
+
+    3. Insert items into collections
+        db.certificates.insertOne({
+            certificate_id: 001,
+            certificate_name: certiName,
+        })
+
+    4. To show thee full data
+        db.certificates
+
+    5. To find anything:
+        db.players.find({
+            score: {
+                $gt: 50
+            }
+        });
+
+    6. To Update:
+        db.certificates.updateOne({
+            summaryNo: "PGL-001"
+        }, {
+            $set: {
+                color: "red",
+                productName: "Diamond"
+            }
+        })
+
+    7. To Delete:
+        db.certificates.deleteOne({
+            _id: "699f292aee6dfadc4fa1a91f"
+        })
+
+
+{
+  "_id": {
+    "$oid": "699f292aee6dfadc4fa1a91f"
+  },
+  "summaryNo": "PGL-001",
+  "productName": "Ruby",
+  "onBehalfOf": "To whom it may concern",
+  "color": "Blue",
+  "cutShape": "Round",
+  "mountingStatus": "Unmounted",
+  "dimension": "8.5 * 2.3 * 1.4",
+  "naturalFaces": "None",
+  "refractiveIndex": "1.9``",
+  "specificGravity": "12.5",
+  "microObservation": "asdsfdgfhg",
+  "remark": "asdfghh",
+  "comments": "defsrgdthyui",
+  "weight": "2.8 oct",
+  "gemstoneImage": "product_1772038442169.png",
+  "createdBy": {
+    "$oid": "695f3b6e420b5dfd3bd8e886"
+  },
+  "createdAt": {
+    "$date": "2026-02-25T16:54:02.181Z"
+  },
+  "updatedAt": {
+    "$date": "2026-02-25T16:54:03.306Z"
+  },
+  "__v": 0,
+  "certificateImage": "/assets/certificate_PGL-001.jpg",
+  "qrImage": "/assets/qr_PGL-001.png"
+}
